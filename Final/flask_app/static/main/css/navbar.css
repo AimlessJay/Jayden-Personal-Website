@@ -1,0 +1,101 @@
+nav{
+    background-color: rgb(90, 52, 104);
+    margin-top: -40px;
+    height: 60px;
+    width: 100vw;
+    z-index: 0;
+    position: absolute;
+}
+nav > ul{
+    height: 30px;
+    list-style-type: none;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    float:right;
+    padding: 15px;
+    margin: 0px;
+    
+
+}
+ .centered{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+
+.hw{
+    float: left;
+    margin-left:5vw ;
+    height: 33%;
+}
+.menubar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    float: right;
+
+}
+
+.links{
+    margin-right:1vw;
+    margin-top:1vw;
+}
+
+.linkedSize{
+    height: 30px;
+    width: 30px;
+}
+
+nav > ul > li > a{
+    color: rgb(251, 251, 251);
+    text-decoration: none;  
+}
+
+nav > div > ul > li > a{
+    color: rgb(251, 251, 251);
+    text-decoration: none;  
+}
+
+nav > ul > li {
+    margin-bottom: 30px; 
+}
+
+nav > ul > li > a:hover{
+    opacity: 0.5;
+    text-decoration: none;  
+}
+
+nav > div > a:hover{
+    opacity: 0.5;
+}
+
+.dropdown{
+    visibility: hidden;
+    position: absolute;
+    background-color: rgb(64, 63, 63);
+    width: 100vw;
+    height: 70vh;
+    margin-top: 60px;
+}
+
+
+@media screen and  (max-width: 650px){
+    nav > ul > li > a{
+        visibility: hidden;
+    }
+    #menuBnt{
+        visibility:visible;
+    }
+}
+
+@media screen and  (min-width: 650px){
+    nav > ul > li > a{
+        visibility: visible;
+    }
+    #menuBtn{
+        visibility:hidden;
+    }
+}

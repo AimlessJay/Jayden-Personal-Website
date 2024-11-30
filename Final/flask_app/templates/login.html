@@ -1,0 +1,61 @@
+{% extends 'shared/layout.html' %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+
+{% block maincontent %}
+
+<div class="login_base">
+    <h1 class="login_content" >Login</h1>
+    <div class="login_content">
+        <input title="emailInput" name="email" placeholder="Email" id="loginEmail">
+    </div>
+    <div class="login_content">
+        <input title="passInput" name= "password"placeholder="Password" id="loginPass">
+    </div>
+    <div>
+        <h5 class="hide_auth" id="Failed"></h5>
+    </div>
+</div>
+<div class="login_btn">
+    <input title="loginButton" class="nopad" type="submit" value="Login" id="sendLogin" onclick="checkCredentials()"/>
+</div>
+<div class="own_btn">
+<a href="signup"><h5>Or Sign-Up </h5></a>
+</div>
+
+<script>
+let count     = 0
+function checkCredentials() {
+    // package data in a JSON object
+    let email = document.getElementById("loginEmail")
+    let pass = document.getElementById("loginPass")
+    let fail = document.getElementById("Failed")
+    var data_d = {'email': email.value, 'password': pass.value}
+    console.log('data_d', data_d)
+
+    // SEND DATA TO SERVER VIA jQuery.ajax({})
+    jQuery.ajax({
+        url: "/processlogin",
+        data: data_d,
+        type: "POST",
+        success:function(retruned_data){
+            retruned_data = JSON.parse(retruned_data)
+            if (retruned_data['success'] === 0){
+                window.location.href = "/home";
+            }else {
+                count++
+                fail.style.display="flex"
+                fail.style.color="color:rgb(247, 255, 91)"
+                fail.value="Authentification Failed: " + count + " Attempts"
+            }
+            }
+        
+    });
+}
+</script>
+{% endblock %}
+
+

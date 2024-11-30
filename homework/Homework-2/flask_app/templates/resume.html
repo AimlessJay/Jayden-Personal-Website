@@ -1,0 +1,72 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+      <!-- For each institution - generate a row --> 
+      {% for inst_id, inst in resume_data.items() %}
+      <!-- Do something... -->
+      <div class="inst">
+        <h1 class="inst_name">{{ inst['name']}} 
+          <span class="inst_city"><p class="inst_city"><i>{{inst['city']}}, {{inst['state']}}</i></p>
+          </span>
+        </h1>
+          {% if inst['positions'] != {} %}
+            {% for pos_id, pos in inst['positions'].items() %}
+            <!-- Do something else... -->
+              <p class="pos_title"><i>{{ pos['title']}}</i>
+                <span class="date">
+                  <span class="date">{{pos['start_date']}} - 
+                  {% if pos['end_date'] != None %}
+                  {{pos['end_date']}}</span>
+                  {% else %}
+                  <span>Current</span>
+                  {% endif %}
+                </span>
+              </p>
+              <p class="responce">{{pos['responsibilities']}}</p>
+              {% if pos['experiance'] != {} %}
+                {% for xp_id, xp in pos['experiance'].items() %}
+                  <!-- Do something else... -->
+                  <ul class="xp_list">
+                    <!-- <a href="Jayden_DeVaull_Poster_Summer_2022.pdf" >Download the pdf</a> -->
+                    {% if xp['hyperlink'] == 'NULL' %}
+                      <li class="xp_list"><p class="xp_name"><b>{{ xp['name']}}: </b>
+                          <span class="xp_description">{{ xp['description']}} </span>
+                        </p>
+                      </li>
+                    {% else %}
+                      <li class="xp_list"><p class="xp_name"><a href="{{xp['hyperlink']}}"><b class="color">{{ xp['name']}}: </b></a>
+                        <span class="xp_description">{{ xp['description']}} </span>
+                      </p>
+                      </li>
+                    {% endif %}
+                  </ul>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endfor %}
+
+      <div class="skills" display="flex">
+        <h2 class="skill_txt">Skills</h2>
+        <ul class="skill_list">
+          {% for inst_id, inst in resume_data.items() %}
+            {% for position_id, pos in inst['positions'].items() %}
+              {% for xp_id, xp in pos['experiance'].items() %}
+                {% if xp['skills'] != {} %}
+                  {% for skill_id, skill in xp['skills'].items() %}
+                    <li><p>{{ skill['name']}} </p></li>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+
+
+
+{% endblock %}
+
+

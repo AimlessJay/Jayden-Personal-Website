@@ -1,0 +1,32 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+<div class="topwrap">
+    <div class="topbody">
+        <h2 position="relative" class="textcenter">Below is a list of projects i worked on in CSE 477:</h2>
+        <p position="relative" class="textcenter">Click image or hyperlink in description to learn more</p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="leftbody">
+        <a href="piano">
+            <img src="../static/main/images/piano.jpeg"
+            class="headshotSizer"
+            alt="Pigture of grand piano"
+            title="Piano">
+        </a>
+    </div>
+    <div class="rightbody">
+        <h2>Javascript Piano</h2>
+        <p>As part of my first homework assignment in CSE 477. I Developed and interactive piano build in HTML, CSS and Javascript. 
+            This tool (in addition to my webpage), highlight my ability to build mobile-friendly, front-end applications. 
+            Click <a class="herelink" href="piano">here</a> to view and play!
+        </p>
+    </div>
+</div>
+<div class="fundiv">
+    <h3>More coming soon!</h3>
+</div>
+
+{% endblock %}

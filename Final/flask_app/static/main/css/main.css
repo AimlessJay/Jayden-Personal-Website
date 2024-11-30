@@ -1,0 +1,271 @@
+h1,h2,h3,h4,h5{
+    color:rgb(247, 255, 91)
+}
+p{
+    color:white;
+    text-align: center;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0,0,0);
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width:100%;
+}
+
+aside{
+    margin: 0px;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat_txt{
+    margin: 30px;
+}
+
+.feedback_sizer{
+    display: none;
+    min-height: 50vh;
+    width: 40%;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, 0);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+}
+.feedback_tab{
+    display: flex;
+    position: fixed;
+    background-color: rgb(90, 52, 104);
+    margin-top: 50vh;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    width: 70px;
+    float: right;
+    transform: rotate(90deg);
+}
+.feedfunction{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background-color: black;
+    transform: rotate(90deg);
+}
+
+.feed{
+    width:350px;
+    background-color: black;
+}
+
+.info{
+    position:relative;
+    width:80%;
+}
+
+.nopad{
+    padding:0;
+    width: 280px;
+}
+
+.feedform{
+    width:100%;
+    text-align: center;
+    text-decoration: solid;
+    padding: 30px;
+}
+
+input{
+    width:100%;
+    height:20%;
+    background-color: grey;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+textarea{
+    padding:10px;
+    background-color: grey;
+    font-size: 20px;
+    width:100%;
+    margin-top: 5px;
+
+}
+
+article{
+    width:100vw;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgba(0,0,0);
+}
+
+form button{
+    margin-top: 6px;
+    color: black;
+    background-color: rgb(247, 255, 91);
+    width:100%;
+    padding:10px;
+    font-size: 20px;
+}
+
+.topwrap {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 255, 0.677);   
+    width: 70vw;
+    height: 100%;
+    margin: 10vh 15vw;
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(90, 52, 104);   
+    width: 70vw;
+    height: 100%;
+    margin: 10vh 15vw;
+    margin-bottom: 0;
+    
+}
+
+.leftbody {
+    position: relative;
+    margin: 5%;
+    margin-right:2%;
+    margin-top:10%;
+    padding: 5%;
+    height:70%;
+    width: 45%;
+    background-color: rgba(0,0,0);
+}
+
+.rightbody {
+    position: relative;
+    margin: 5%;
+    margin-left:2%;
+    margin-top:10%;
+    padding: 5%;
+    height:60%;
+    width: 45%;
+    background-color: rgba(0,0,0);
+    overflow: auto;
+}
+
+@media screen and  (max-width: 650px){
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100vw;
+        height: 70lh;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: rgb(0,0,0);
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(90, 52, 104);   
+        width: 70vw;
+        height: 100%;
+        margin: 10vh 15vw;
+    }
+
+    .leftbody{
+        position: relative;
+        align-self: center;
+        height:100%;
+        width: 70%;
+        margin:0;
+        margin-top: 5%;
+        background-color: rgba(0,0,0);;
+    }
+    
+    .rightbody{
+        position: relative;
+        align-self: center;
+        height:100%;
+        width: 70%;
+        margin:0;
+        background-color: rgba(0,0,0);;
+        overflow:unset;
+    }
+}
+
+
+.topbody{
+    position: relative;
+    margin: 5%;
+    margin-top:10%;
+    padding: 5%;
+    height:30%;
+    width: 70%;
+    background-color: rgba(137, 43, 226, 0.672);
+    border-color: rgb(133, 72, 246);
+}
+
+.leave_btn{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    width: 40%;
+}
+
+.fundiv{
+    width:60vw;
+    height: 20vh;
+    margin: 5%;
+    padding: 20px;
+    background-color: rgb(240, 107, 167);
+    border-color: rgb(133, 72, 246);
+    text-align: center;
+}
+
+.headshotSizer{
+    width: 100%;
+    height:100%;
+}
+
+.herelink{
+    color: rgb(225, 120, 145);
+    text-decoration: none;
+    a:hover{
+        color: rgba(225, 120, 144, 0.52);
+    }
+}
+
+article > div > div > a:hover{
+    opacity: .5;
+}
+
+article > div > div > p >a:hover{
+    opacity: .5;
+}
+
+
+.textcenter{
+    text-align: center;
+}

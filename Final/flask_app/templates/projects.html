@@ -1,0 +1,54 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+<div class="topwrap">
+    <div class="topbody">
+        <h2 position="relative" class="textcenter">Below is a list of projects i worked on in CSE 477:</h2>
+        <p position="relative" class="textcenter">Click image or hyperlink in description to learn more</p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="leftbody">
+        <a href="piano">
+            <img src="../static/main/images/piano.jpeg"
+            class="headshotSizer"
+            alt="Pigture of grand piano"
+            title="Piano">
+        </a>
+    </div>
+    <div class="rightbody">
+        <h2>Javascript Piano</h2>
+        <p>As part of my first homework assignment in CSE 477. I Developed and interactive piano build in HTML, CSS and Javascript. 
+            This tool (in addition to my webpage), highlight my ability to build mobile-friendly, front-end applications. 
+            Click <a class="herelink" href="piano">here</a> to view and play!
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="leftbody">
+        <a href="wordle">
+            <img src="../static/main/images/NotWordle.jpg"
+            class="headshotSizer"
+            alt="Not Wordle Game"
+            title="NotWordle">
+        </a>
+    </div>
+    <div class="rightbody">
+        <h2>Wordle Game</h2>
+        <p>Guess the Wordle in n tries.
+            n is the number of letters in today's word.
+            Each guess must be a valid n-letter word.
+            The color of the tiles will change to show how close your guess was to the word.
+            grey: if the character does not show up anywhere in the hidden word;
+            yellow: if user guessed a correct character but in an incorrect location;
+            green: if the user guessed a correct character in a correct location.
+            Click <a class="herelink" href="wordle">here</a> to view and play!
+        </p>
+    </div>
+</div>
+<div class="fundiv">
+    <h3>More coming soon!</h3>
+</div>
+
+{% endblock %}

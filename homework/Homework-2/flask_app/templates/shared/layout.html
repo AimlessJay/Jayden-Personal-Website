@@ -1,0 +1,89 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jayden DeVaull's personal page</title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/content.css') }}">
+  <!-- <link rel="stylesheet"    href="{{ url_for('static', filename='static/main/css/navbar.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='static/main/css/header.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='static/main/css/footer.css') }}"> -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='static/main/images/logo.png') }}">
+  {% block extracss %}{% endblock %}
+  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='main/js/piano.js') }}" defer></script>
+  {% block extrajs %}{% endblock %}
+</head>
+
+<body>
+  <button onclick="toggle()" id="feedbackBtn" class="feedback_tab" popovertarget="user_feedback" popovertargetaction="toggle" type="button"><h5>Feedback</h5></button>
+    <article>
+    <!-- The header  -->
+    <header>
+      <img class = "headerimage"
+      src = "static/main/images/space-header.png">
+
+    </header>
+
+    <!-- The navigation bar -->
+    <nav>
+      <div class="hw"><p>CSE 477 - Homework 1</p></div>
+          <ul>
+              <li style="margin-right: 2vw;"><a href="home">Home</a></li>
+              <li style="margin-right: 2vw;"><a href="projects">Projects</a></li>
+              <li style="margin-right: 2vw;"><a href="resume">Resume</a></li>
+              <li style="margin-right: 2vw; margin-bottom: 5px;"><a href="https://www.linkedin.com/in/jayden-devaull-66a60a192/"><img class="linkedSize" src = "../static/main/images/social-linkedin.png"></a></li>
+          </ul>
+          <div class="menubar"><button id="menuBtn" popovertarget="dropdown" popovertargetaction="toggle" type="button"><img class="linkedSize"src="../static/main/images/menu-bar.png"></button></div>
+          <div id="dropdown" class="dropdown">
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="resume.html">Resume</a></li>
+                  <li><a href="https://www.linkedin.com/in/jayden-devaull-66a60a192/">LinkedIn</a></li>
+              </ul>
+          </div>
+    </nav>
+
+    <!-- The main content  -->
+    <main>
+      <div id="feedback_sizer" class="feedback_sizer">
+        <div class="feed">
+          <form action=/getFeedback method=post enctype=multipart/form-data>
+            <h1 class="info" >Feedback Form</h1>
+            <div class="info">
+              <input name= "name"placeholder="Your Name">
+            </div>
+            <div class="info">
+              <input name="email" placeholder="Your Email">
+            </div>
+            <div class="info">
+            <textarea class="nopad" name= "comment" cols="20" rows ="10" placeholder="Your Feedback..."></textarea>
+            </div>
+            <div class="info">
+            <input class="nopad" type="submit" value="SEND" id="sendFeedback"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      {% block maincontent %}{% endblock %}
+    </main>
+
+    <!-- The footer of the file -->
+    </article>
+    <footer>
+      <p>© 2023 Jayden DeVaull</p>
+    </footer>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+

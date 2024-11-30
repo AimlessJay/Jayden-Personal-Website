@@ -1,0 +1,36 @@
+.feed_div{
+    height: auto;
+    width: 70%;
+    padding:30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    border-style:double;
+    border-color: rgb(90, 52, 104);
+}
+
+.feed_title{
+    text-align: center;
+}
+
+.feed_txt{
+    text-align: left;
+}
+
+.thank_div{
+    height: auto;
+    width: 70%;
+    padding:30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    border-style:groove;
+    border-color: rgb(240, 107, 167);;
+    background-color: rgb(90, 52, 104);
+}
+
+.thank_txt{
+    text-align: center;
+}

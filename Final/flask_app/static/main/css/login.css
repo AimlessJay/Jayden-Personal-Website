@@ -1,0 +1,31 @@
+.login_base{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: whitesmoke; */
+    margin: 10%;
+}
+
+.login_content{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.login_btn{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.own_btn{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.hide_auth{
+    display: none;
+}

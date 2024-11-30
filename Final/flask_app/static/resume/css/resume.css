@@ -1,0 +1,93 @@
+.inst{
+    height: auto;
+    width: 70%;
+    padding:30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    border-style: groove;
+    border-color: rgb(90, 52, 104);
+}
+
+.inst_name{
+    margin: 10px 0;
+    text-align: left;
+    text-decoration: solid;
+    background-color: rgb(90, 52, 104);
+}
+
+.inst_city{
+    float: right;
+    text-align: right;
+    font-size: 16px;
+    margin: 0;
+    font-display:unset;
+    text-decoration: solid;
+}
+
+.pos_title{
+    text-align: left;
+    font-size: 22px;
+    margin: 0;
+    text-decoration: solid;
+}
+
+.responce{
+    margin: 5px 0;
+    font-size:14px;
+    text-align: left;
+    text-decoration: solid;
+}
+
+.date{
+    float: right;
+    text-align: right;
+    font-size: medium;
+    text-decoration: solid;
+}
+
+.xp_list{
+    list-style: circle;
+    list-style-type: circle;
+    margin:0;
+}
+
+.xp_name{
+    text-align: left;
+    text-decoration: solid;
+}
+
+.color{
+    color:rgb(240, 107, 167);
+}
+
+.xp_description{
+    text-align: left;
+    text-decoration: solid;
+}
+
+.skills{
+    height: auto;
+    width: 70%;
+    padding:30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    border-style: groove;
+    border-color: rgb(90, 52, 104);
+}
+
+.skill_txt{
+    text-decoration: solid;
+    background-color: rgb(90, 52, 104);
+    text-align: center;
+}
+
+.skill_list{
+    list-style-type:circle;
+    text-decoration: solid;
+    column-count: 3;
+}

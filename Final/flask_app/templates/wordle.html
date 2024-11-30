@@ -1,0 +1,91 @@
+{% extends 'shared/layout.html' %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='wordle/js/wordle.js') }}" defer></script>
+{% endblock %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='wordle/css/wordle.css') }}">
+{% endblock %}
+
+{% block maincontent %}
+
+<body>
+    <div id="rule-container" class="rule-container">
+        <h2>Instructions</h2>
+        <p>Guess the Wordle in n tries.</p>
+        <p>n is the number of letters in today's word.</p>
+        <p>Each guess must be a valid n-letter word.</p>
+        <p>The color of the tiles will change to show how close your guess was to the word.</p>
+        <p><strong class="grey-letter">Grey:</strong> if the character does not show up anywhere in the hidden word;</p>
+        <p><strong class="yellow-letter">Yellow:</strong> if the user guessed a correct character but in an incorrect location;</p>
+        <p><strong class="green-letter">Green:</strong> if the user guessed a correct character in a correct location.</p>
+        <button class="ok-button" onclick="hideRules()">OK</button>
+    </div>
+
+    <div class="leaderboard"id="leaderboard-container">
+        <h2 id="result-message"></h2>
+        <h3 id="hidden-word"></h3>
+        <p id="time-taken"></p>
+        <h1 id="leader-title">Top 5 LeaderBoard By Time</h1>
+    </div>
+
+    <div class="wordle-container" id="wordle-container">
+        <h1>Wordle Game</h1>
+        <div class="grid-container" id="grid-container"></div>
+    </div>
+
+    <div id="full-keyboard" class="full-keyboard">
+        <div class="keyboard" id="keyboard-row1">
+            <button onclick="addToInput('Q')">Q</button>
+            <button onclick="addToInput('W')">W</button>
+            <button onclick="addToInput('E')">E</button>
+            <button onclick="addToInput('R')">R</button>
+            <button onclick="addToInput('T')">T</button>
+            <button onclick="addToInput('Y')">Y</button>
+            <button onclick="addToInput('U')">U</button>
+            <button onclick="addToInput('I')">I</button>
+            <button onclick="addToInput('O')">O</button>
+            <button onclick="addToInput('P')">P</button>
+        </div>
+        <div class="keyboard" id="keyboard-row2">
+            <button onclick="addToInput('A')">A</button>
+            <button onclick="addToInput('S')">S</button>
+            <button onclick="addToInput('D')">D</button>
+            <button onclick="addToInput('F')">F</button>
+            <button onclick="addToInput('G')">G</button>
+            <button onclick="addToInput('H')">H</button>
+            <button onclick="addToInput('J')">J</button>
+            <button onclick="addToInput('K')">K</button>
+            <button onclick="addToInput('L')">L</button>
+        </div>
+        <div class="keyboard" id="keyboard-row3">
+            <button onclick="addToInput('Z')">Z</button>
+            <button onclick="addToInput('X')">X</button>
+            <button onclick="addToInput('C')">C</button>
+            <button onclick="addToInput('V')">V</button>
+            <button onclick="addToInput('B')">B</button>
+            <button onclick="addToInput('N')">N</button>
+            <button onclick="addToInput('M')">M</button>
+        </div>
+    </div>
+
+    <button id="guess-btn" class="guess-btn" onclick="checkGuess()">Check Guess</button>
+
+    <!-- <textarea type="text" id="userInput" oninput="updateGrid()" placeholder="Type letters here" readonly></textarea> -->
+
+    <script>
+        var wordOfTheDay = "{{ word_of_the_day }}";
+        //console.log("Word of the day:", wordOfTheDay);
+        var currUser = "{{ user }}";
+        //console.log("Current user:", currUser);
+        var instructions = "{{instructions}}";
+        //console.log("Show rules? ", instructions);
+
+        // function hideRules() {
+        //     document.getElementById("rule-container").style.display = "none";
+        // }
+    </script>
+</body>
+
+{% endblock %}

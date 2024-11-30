@@ -1,0 +1,19 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+    <div class="feed_div">
+        <h1 class="feed_title">Feedback Page</h1>
+        <h4> This is some other feedback I have recieved:</h4>
+        <!-- For each feedback submission - generate a row --> 
+        {% for comment_id, feed in feedback.items() %}
+            <p class="feed_txt">{{feed['name']}} says: {{feed['comment']}}</p>
+        {% endfor %}
+    </div>
+    <div class="thank_div">
+        <h4 class="thank_txt">Thank you for your feedback!</h4>
+    </div>
+     
+
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+@import "navbar.css";
+@import "header.css";
+@import "main.css";
+@import "footer.css";
+@import "feedback.css"; 
+@import "../../piano/css/piano.css";
+@import "login.css";
+@import "signup.css";
+@import "../../resume/css/resume.css";

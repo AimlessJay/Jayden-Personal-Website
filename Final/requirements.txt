@@ -1,0 +1,9 @@
+flask
+gunicorn
+cryptography
+flask-socketio
+eventlet==0.30.2
+Flask-Failsafe
+mysql-connector-python
+requests==2.26.0
+beautifulsoup4==4.10.0

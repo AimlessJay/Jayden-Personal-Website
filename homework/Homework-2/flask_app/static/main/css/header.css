@@ -1,0 +1,15 @@
+header {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    z-index: -10;
+}
+
+.headerimage{
+    width: 100vw;
+    height: 30vh;
+    border: 1px solid #333;
+    padding: 0;
+    margin: 0;
+
+}

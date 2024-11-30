@@ -1,0 +1,100 @@
+
+{% extends 'shared/layout.html' %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='piano/js/piano.js') }}" defer></script>
+{% endblock %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='piano/css/piano.css') }}">
+{% endblock %}
+
+{% block maincontent %}
+    <div class="wrapper-piano">
+        <div class="topbody-piano">
+            <p class="textcenter">"Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, 
+                call out to it - we see you."</p>
+        </div>
+    </div>
+    <div class="cover">
+        <img alt="spooky image" loading="lazy" class="seeimg" src="../static/piano/images/texture.jpeg">
+    </div>
+    <div class="fundiv-piano">
+        <div class="piano-base">
+            <div class="piano-title">
+                <h3 class="textcenter"
+                    padding="1em">Great Old One</h3>
+            </div>
+            <div class="keybox">
+                <div class="white-key" 
+                id="w1"><p class="keylabelw">A</p></div>
+
+                <div class="black-key"
+                style="margin-left: 7.5%"
+                id="b1"><p class="keylabelb">W</p></div>
+
+                <div class="white-key"
+                style="margin-left: 10%"
+                id="w2"><p class="keylabelw">S</p></div>
+
+                <div class="black-key"
+                style="margin-left: 17.5%"
+                id="b2"><p class="keylabelb">E</p></div>
+
+                <div class="white-key"
+                style="margin-left: 20%"
+                id="w3"><p class="keylabelw">D</p></div>
+
+                <div class="white-key"
+                style="margin-left: 30%"
+                id="w4"><p class="keylabelw">F</p></div>
+
+                <div class="black-key"
+                style="margin-left: 37.5%"
+                id="b3"><p class="keylabelb">T</p></div>
+
+                <div class="white-key"
+                style="margin-left: 40%"
+                id="w5"><p class="keylabelw">G</p></div>
+
+                <div class="black-key"
+                style="margin-left: 47.5%"
+                id="b4"><p class="keylabelb">Y</p></div>
+
+                <div class="white-key"
+                style="margin-left: 50%"
+                id="w6"><p class="keylabelw">H</p></div>
+
+                <div class="black-key"
+                style="margin-left: 57.5%"
+                id="b5"><p class="keylabelb">U</p></div>
+
+                <div class="white-key"
+                style="margin-left: 60%"
+                id="w7"><p class="keylabelw">J</p></div>
+
+                <div class="white-key"
+                style="margin-left: 70%"
+                id="w8"><p class="keylabelw">K</p></div>
+
+                <div class="black-key"
+                style="margin-left: 77.5%"
+                id="b6"><p class="keylabelb">O</p></div>
+
+                <div class="white-key"
+                style="margin-left: 80%"
+                id="w9"><p class="keylabelw">L</p></div>
+
+                <div class="black-key"
+                style="margin-left: 87.5%"
+                id="b7"><p class="keylabelb">P</p></div>
+
+                <div class="white-key"
+                style="margin-left: 90%"
+                id="w10"><p class="keylabelw">;</p></div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
